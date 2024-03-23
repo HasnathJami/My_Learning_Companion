@@ -21,35 +21,54 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Home"),
         ),
-        body: Center(
-          child: Container(
-              // padding: const EdgeInsets.all(8),
-              alignment: Alignment.center,
-              //   color: Colors.teal,
-              height: 100,
-              width: 100,
-              decoration: BoxDecoration(
-                  //color: Colors.teal,
-                  //shape: BoxShape.circle,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.shade400,
-                        blurRadius: 5,
-                        // spreadRadius: 10,
-                        offset: Offset(2.0, 5.0))
+        body: Padding(
+          padding: EdgeInsets.all(8),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+              color: Colors.black,
+              // height: MediaQuery.of(context).size.height,
+              // width: MediaQuery.of(context).size.width,
+              height: 600,
+              width: 200,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      color: Colors.green,
+                      height: 100,
+                      width: 100,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      color: Colors.yellow,
+                      height: 100,
+                      width: 100,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      color: Colors.red,
+                      height: 100,
+                      width: 100,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      color: Colors.teal,
+                      height: 100,
+                      width: 100,
+                    )
                   ],
-                  gradient:
-                      LinearGradient(colors: [Colors.yellow, Colors.pink])),
-              child: Text(
-                "I am a Big Box eeee",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
                 ),
-              )),
-        ));
+              ),
+            ),
+          ),
+        )
+    );
   }
+
+
 }
